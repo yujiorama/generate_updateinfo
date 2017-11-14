@@ -105,12 +105,12 @@ for ssev in options.severity:
                 SEVERITY.append(vsev.capitalize())
             break
         else:
-            print "Invalid security severity specified ({}).".format(ssev)
+            print "Invalid security severity specified ({0}).".format(ssev)
             sys.exit(1)
     else:
         SEVERITY.append(ssev.capitalize())
 if options.verbose:
-    print "SEVERITY: {}".format(SEVERITY)
+    print "SEVERITY: {0}".format(SEVERITY)
 
 # What types of advisories would you like to track?
 TYPES = []
@@ -121,12 +121,12 @@ for atype in options.type:
                 TYPES.append(adv_types[vtype])
             break
         else:
-            print "Invalid advisory type specified ({}).".format(atype)
+            print "Invalid advisory type specified ({0}).".format(atype)
             sys.exit(1)
     else:
         TYPES.append(adv_types[atype.lower()])
 if options.verbose:
-    print "TYPES: {}".format(TYPES)
+    print "TYPES: {0}".format(TYPES)
     
 # Who is this from?
 UPDATE_FROM = options.from_email
